@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head class="position-absolute top-0 bottom-0 start-50">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <meta charset="UTF-8"/>
+        <title>Dividends</title>
+        
+    
+    
+    </head>
+    <body>
+       <div class="nav">
+            <li><a class="nav-link" href="{% url 'Signup' %}">Signup</a></li>
+            <li><a class="nav-link" href="{% url 'Signin' %}">Signin</a></li>
+        </div>
+        <div class="text-center">
+          <a href="/" class="text-center start-50 fs-1 text-decoration-none">DaCentral</a>
+        </div>
+        <nav class="nav justify-content-center position-relative border-top pb-3 mb-3">
+        <ul class="nav">
+        <li><a href="/" class="nav-link text-decoration-none">Financial</a></li>
+        <li><a href="/" class="nav-link text-decoration-none">Assets</a></li>
+        <li><a href="/" class="nav-link text-decoration-none">Wallets</a></li>
+        <li><a href="/" class="nav-link text-decoration-none">Messages</a></li>
+        </ul>
+        </nav>
+    
+        {% block content %}
+
+        
+
+        {% endblock %}
+    </body>
+    <footer class="bottom-0 top-100 justify-content-center position-relative">
+        <div class="nav postion-relative border-bottom pb-3 mb-3 ">
+        <li><a href="/" class="nav-link text-decoration-none">About</a></li>
+        <li><a href="/" class="nav-link text-decoration-none">Contact me</a></li>
+        <li><a href="/" class="nav-link text-decoration-none">Report Errors</a></li>
+        </div>
+        <p class="text-center text-body-secondary">
+        {{current_year}}@Dividends
+        </p>
+    </footer>
+</html>
+
