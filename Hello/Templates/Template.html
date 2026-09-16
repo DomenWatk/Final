@@ -9,34 +9,43 @@
     
     </head>
     <body>
-       <div class="nav">
+       <div class="nav justify-content-end">
             <li><a class="nav-link" href="{% url 'Signup' %}">Signup</a></li>
             <li><a class="nav-link" href="{% url 'Signin' %}">Signin</a></li>
+            {{Logout}}
         </div>
         <div class="text-center">
           <a href="/" class="text-center start-50 fs-1 text-decoration-none">DaCentral</a>
         </div>
         <nav class="nav justify-content-center position-relative border-top pb-3 mb-3">
         <ul class="nav">
-        <li><a href="/" class="nav-link text-decoration-none">Financial</a></li>
-        <li><a href="/" class="nav-link text-decoration-none">Assets</a></li>
+        <li><a href="{% url 'Finance' %}" class="nav-link text-decoration-none">Financial</a></li>
+        <li><a href="{% url 'Assets' %}" class="nav-link text-decoration-none">Assets</a></li>
         <li><a href="/" class="nav-link text-decoration-none">Wallets</a></li>
         <li><a href="/" class="nav-link text-decoration-none">Messages</a></li>
         </ul>
         </nav>
-    
-        {% block content %}
+        <div class="container mt-5">
+            <div class=" d-flex justify-content-center align-items-center">
+                <div>
+                    {% block content %}
+        
 
         
 
-        {% endblock %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
     </body>
-    <footer class="bottom-0 top-100 justify-content-center position-relative">
-        <div class="nav postion-relative border-bottom pb-3 mb-3 ">
+    <footer class=" justify-content-center fixed-bottom ">
+        <div class="nav postion-relative border-bottom pb-3 mb-3 justify-content-center">
         <li><a href="/" class="nav-link text-decoration-none">About</a></li>
         <li><a href="/" class="nav-link text-decoration-none">Contact me</a></li>
         <li><a href="/" class="nav-link text-decoration-none">Report Errors</a></li>
         </div>
+        
         <p class="text-center text-body-secondary">
         {{current_year}}@Dividends
         </p>
