@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class ExtendedSignupForm(UserCreationForm):
-    email = forms.EmailField(required=True,widget=forms.TextInput(attrs={"class": "form-control"})
+    email = forms.EmailField(required=True,widget=forms.TextInput(attrs={"class": "form-control",'style':'width:150px;'})
 )
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
